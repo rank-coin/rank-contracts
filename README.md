@@ -1,13 +1,13 @@
-# GEE Token Smart Contracts
+# RANK Token Smart Contracts
 
 ---
 
-**Last updated:** November 5, 2017
+**Last updated:** February 1, 2018
 
 ---
 
 **Table of Contents**
-- [GEE token smart contracts](#gee-token-smart-contracts)
+- [RANK token smart contracts](#rank-token-smart-contracts)
     + [Overview](#overview)
     + [Contracts](#contracts)
       - [Main contracts](#main-contracts)
@@ -62,13 +62,13 @@
 ---
 
 ## Overview
-GEE token system consists of multiple smart contracts written in Solidity programming language. This system allows issuing a standards-compliant custom token on the Ethereum network. This documentation explains the purpose and the realisation (including technical details) of each of these contracts.
+RANK token system consists of multiple smart contracts written in Solidity programming language. This system allows issuing a standards-compliant custom token on the Ethereum network. This documentation explains the purpose and the realisation (including technical details) of each of these contracts.
 
 These contracts were thoroughly tested and all parts were double checked many times. If you are a 'smart contracts' developer and see how these contracts can be optimized even better and made more efficient, please contact us.
 
 During the following days, these contracts will continue to be updated. Before launching them on the main Ethereum network, the block numbers and hard-coded addresses will be modified.
 
-The GEE Token sale will start on 7th of November, 2017. More details: https://tokensale.geens.com
+The RANK Token sale will start on 1th of February, 2018. More details: http://rankcoin.name/how-to-buy-rank-tokens/
 
 ---
 
@@ -76,8 +76,8 @@ The GEE Token sale will start on 7th of November, 2017. More details: https://to
 
 ### Main contracts
 * Token
-* GEEToken
-* GEECrowdsale
+* RANKToken
+* RANKCrowdsale
 
 ### Auxiliary contracts
 * Ownable
@@ -87,14 +87,6 @@ The GEE Token sale will start on 7th of November, 2017. More details: https://to
 
 ### Libraries
 * SafeMath
-
----
-
-## Schematic representation
-
-Links to Mermaid Live Editor: [GEE Token](https://mermaidjs.github.io/mermaid-live-editor/#/edit/Z3JhcGggVEQKCk1BKDxiPmNvbnRyYWN0IE1pZ3JhdGVBZ2VudDwvYj4pCk1BLS0-bWFGTVtmdW5jdGlvbl0KbWFGTS0tPiBNaWdyYXRlQWdlbnQoPGI-TWlncmF0ZUFnZW50PC9iPikKClRbY29udHJhY3QgVG9rZW5dCgoKUGF1c2FibGUKRVJDMjBbaXMgRVJDMjBdLS0-VApQYXVzYWJsZVtpcyBQYXVzYWJsZV0tLT5UClRydXN0YWJsZVtpcyBUcnVzdGFibGVdLS0-UGF1c2FibGUKCgpTTVtVU0lORyBTYWZlTWF0aC5zb2xdClNNLS0-QwoKCkMoPGI-Y29udHJhY3QgVG9rZW48L2I-KQoKQy0tPkVSQzIwCgpULS0-TWlncmF0YWJsZVRva2VuCgpDLS0-UGF1c2FibGUKCkMtLT5UcnVzdGFibGUKCk93bmFibGUgLS0-IFRydXN0YWJsZQoKCgoKCgpPd25hYmxlX00tLT5tX29ubHlPd25lcls8Yj5vbmx5T3duZXI8L2I-PC9icj5yZXF1aXJlIG1zZy5zZW5kZXIgPT0gb3duZXIgXQpPd25hYmxlX00tLT5tX25vdFplcm9BZGRyZXNzWzxiPm5vdFplcm9BZGRyZXNzPC9iPjwvYnI-cmVxdWlyZSBfYWRkcmVzcyAhPSBhZGRyZXNzIDAgXQoKT3duYWJsZVtjb250cmFjdCBPd25hYmxlXQoKT3duYWJsZV9NW21vZGlmaWVyXQpPd25hYmxlX0VbZXZlbnRdCk93bmFibGVfRltmdW5jdGlvbl0KT3duYWJsZS0tPk93bmFibGVfTQpPd25hYmxlLS0-T3duYWJsZV9FCk93bmFibGUtLT5Pd25hYmxlX0YKCgpPd25hYmxlX0UtLT4gZV9Pd25lcnNoaXBUcmFuc2ZlcnJlZFs8Yj5Pd25lcnNoaXBUcmFuc2ZlcnJlZDwvYj48YnI-YWRkcmVzcyBpbmRleGVkIF9wcmV2aW91c093bmVyLDxicj4gYWRkcmVzcyBpbmRleGVkIF9uZXdPd25lcl0KCk93bmFibGVfRiAtLT4gZm5fT3duYWJsZVtPd25hYmxlXQpPd25hYmxlX0YgLS0-IGZuX3RyYW5zZmVyT3duZXJzaGlwW3RyYW5zZmVyT3duZXJzaGlwXQpDLS0-T3duYWJsZQoKTWlncmF0YWJsZVRva2VuW2NvbnRyYWN0IE1pZ3JhdGFibGVUb2tlbl0KTWlncmF0YWJsZVRva2VuLS0-R2VlVG9rZW4KCkdlZVRva2VuW2NvbnRyYWN0IEdlZVRva2VuXQoKR2VlVG9rZW4tLT5HZWVUb2tlbl9GCkdlZVRva2VuX0YtLT5mbl9HZWVUb2tlbgpHZWVUb2tlbl9GLS0-Zm5fdW5sb2NrVGVhbVRva2VucwoKZm5fR2VlVG9rZW5bR2VlVG9rZW5dCmZuX3VubG9ja1RlYW1Ub2tlbnNbdW5sb2NrVGVhbVRva2Vuc10KR2VlVG9rZW5fRltmdW5jdGlvbl0K) & [GEE Token Sale](https://mermaidjs.github.io/mermaid-live-editor/#/edit/Z3JhcGggVEQKY3NsX3Rva2VuW2NvbnRyYWN0IFRva2VuXQpjc2xfY3Jvd2RzYWxlW2NvbnRyYWN0IENyb3dkc2FsZV0KQ3Jvd2RzYWxlLS0-Y3NsX3Rva2VuCkNyb3dkc2FsZS0tPmNzbF9jcm93ZHNhbGUKCgpPd25hYmxlW2lzIE93bmFibGVdLS0-Y3NsX2Nyb3dkc2FsZQoKZm5fY3NsX3Zhcl9DW2NvbnN0YW50XQpjc2xfY3Jvd2RzYWxlLS0-Y3NsX2Nyb3dkc2FsZV92YXJzCmNzbF9jcm93ZHNhbGVfdmFyc1tWQVJJQUJMRV0KCmNzbF90b2tlbi0tPmZuX2NzbF90b2tlbltmdW5jdGlvbl0KZm5fY3NsX3ZhclttdXRhYmxlXQpmbl9jc2xfdmFyX0NbY29uc3RhbnRdCmNzbF9jcm93ZHNhbGVfdmFycy0tPmZuX2NzbF92YXJfQwpjc2xfY3Jvd2RzYWxlX3ZhcnMtLT5mbl9jc2xfdmFyCmZuX2NzbF92YXItLT5zb2xkCnNvZnRDYXAKZm5fY3NsX3Zhcl9DLS0-c29mdENhcFs8Yj5zb2Z0Q2FwPC9iPjxicj4xMzUwMF0KZm5fY3NsX3Zhcl9DLS0-bWluRXRoZXJbPGI-bWluRXRoZXIgPC9iPjxicj4wLjAzIGV0aGVyXQptaW5FdGhlci0tPm1heEV0aGVyWzxiPm1heEV0aGVyIDwvYj48YnI-MTAwMCBldGhlcl0KZm5fY3NsX3Zhcl9DLS0-c3RhcnRCbG9ja051bWJlcls8Yj5zdGFydEJsb2NrTnVtYmVyPC9iPjxicj5ub3QgeWV0IHNwZWNpZmllZF0Kc3RhcnRCbG9ja051bWJlci0tPmVuZEJsb2NrTnVtYmVyWzxiPmVuZEJsb2NrTnVtYmVyPC9iPjxicj5ub3QgeWV0IHNwZWNpZmllZF0KZm5fY3NsX3Zhcl9DLS0-dGllcjFQcmljZVs8Yj50aWVyMVByaWNlIDwvYj48YnI-NjAwMDAwMF0KdGllcjFQcmljZS0tPnRpZXIyUHJpY2VbPGI-dGllcjJQcmljZSA8L2I-PGJyPjY3MDAwMDBdCnRpZXIyUHJpY2UgLS0-dGllcjNQcmljZVs8Yj50aWVyM1ByaWNlIDwvYj48YnI-NzQwMDAwMF0KdGllcjNQcmljZS0tPnRpZXI0UHJpY2VbPGI-dGllcjRQcmljZTwvYj48YnI-ODIwMDAwMF0KZm5fY3NsX3Zhci0tPmZ1bmQKZm5fY3NsX3Zhci0tPmhhcmRDYXBbPGI-aGFyZENhcDwvYj48YnI-NjcgKiAxMCoqNiAqIDEwKio4XQpmbl9jc2xfdmFyLS0-cHJpY2VbPGI-cHJpY2U8L2I-IDxicj4gbGVuZ3RoOiAzIGRheXNdCnByaWNlLS0-dGllcjJbPGI-dGllcjI8L2I-IDxicj4gbGVuZ3RoOiA3IGRheXNdCnRpZXIyLS0-dGllcjNbPGI-dGllcjM8L2I-IDxicj4gbGVuZ3RoOiAxMCBkYXlzXQp0aWVyMy0tPnRpZXI0WzxiPnRpZXI0PC9iPiA8YnI-IGxlbmd0aDogMTAgZGF5c10KCmNzbF9jcm93ZHNhbGVfRVtFVkVOVF0KY3NsX2Nyb3dkc2FsZS0tPmNzbF9jcm93ZHNhbGVfRQpjc2xfY3Jvd2RzYWxlX0UtLT5jc2xfY3Jvd2RzYWxlX0VfQnV5W0J1eV0KY3NsX2Nyb3dkc2FsZV9FLS0-Y3NsX2Nyb3dkc2FsZV9FX0NoYW5nZUZ1bmRbQ2hhbmdlRnVuZF0KY3NsX2Nyb3dkc2FsZV9FLS0-Y3NsX2Nyb3dkc2FsZV9FX1JlZnVuZFtSZWZ1bmRdCgpjc2xfY3Jvd2RzYWxlX0ZbRlVOQ1RJT05dCmNzbF9jcm93ZHNhbGUtLT5jc2xfY3Jvd2RzYWxlX0YKCmNzbF9jcm93ZHNhbGVfRi0tPmNzbF9mbl9Dcm93ZHNhbGVbPGI-Q3Jvd2RzYWxlPC9iPjxicj5jb25zdHJ1Y3Rvcl0KY3NsX2Nyb3dkc2FsZV9GLS0-Y3NsX2ZuX2ZhbGxiYWNre0ZBTExCQUNLfQpjc2xfZm5fZmFsbGJhY2stLT5pc0Nyb3dkc2FsZUFjdGl2ZVtJRiA8YnI-IGlzQ3Jvd2RzYWxlQWN0aXZlID09IHRydWU8YnI-IDxiPkJVWTxiPl0KY3NsX2ZuX2ZhbGxiYWNrLS0-cmVxdWlyZV9zZW5kZXJfb3duZXJbRUxTRSA8YnI-cmVxdWlyZSAgbXNnLnNlbmRlciA9PSBvd25lciA8YnI-XQpyZXF1aXJlX3NlbmRlcl9vd25lci0tPmNzbF9mbl9Dcm93ZHNhbGUKY3NsX2Nyb3dkc2FsZV9GLS0-Y3NsX2ZuX2ZpbmFsaXplW2ZpbmFsaXplXQpjc2xfY3Jvd2RzYWxlX0YtLT5jc2xfZm5fYnV5W2J1eV0KY3NsX2Nyb3dkc2FsZV9GLS0-Y3NsX2ZuX2lzQ3Jvd2RzYWxlQWN0aXZlW2lzQ3Jvd2RzYWxlQWN0aXZlXQpjc2xfY3Jvd2RzYWxlX0YtLT5jc2xfZm5fZ2V0UHJpY2VbZ2V0UHJpY2VdCmNzbF9jcm93ZHNhbGVfRi0tPmNzbF9mbl90cmFuc2Zlck93bmVyc2hpcFt0cmFuc2Zlck93bmVyc2hpcF0KY3NsX2Nyb3dkc2FsZV9GLS0-Y3NsX2ZuX3N0b3BJbkVtZXJnZW5jeVtzdG9wSW5FbWVyZ2VuY3ldCmNzbF9jcm93ZHNhbGVfRi0tPmNzbF9mbl9yZWZ1bmRbcmVmdW5kXQoKCgpmbl9jc2xfdG9rZW4tLT5mbl9jc2xfdG9rZW5fYnVybls8Yj5idXJuPC9iPjxicj51aW50MjU2IF92YWx1ZV0KZm5fY3NsX3Rva2VuLS0-Zm5fY3NsX3Rva2VuX3RyYW5zZmVyWzxiPnRyYW5zZmVyPC9iPjxicj5hZGRyZXNzIF90bywgdWludDI1NiBfdmFsdWVdCg)
-
----
 
 ## Main contracts
 
@@ -112,13 +104,13 @@ Total supply of tokens is 100 million.
 <br>
 <br>
 ```javascript
- uint256 public crowdsaleEndBlock = 4695000;
+ uint256 public crowdsaleEndBlock = 4795000;
 ```
 A block number that indicates when the Crowdsale ends.
 <br>
 <br>
 ```javascript
-uint256 public constant MAX_END_BLOCK_NUMBER = 4890000;
+uint256 public constant MAX_END_BLOCK_NUMBER = 4891000;
 ```
 A block number that indicates the max possible end block number.
 <br>
@@ -328,7 +320,7 @@ Some functions may only be executed when the Crowdsale is over.
 
 ---
 
-### GEEToken
+### RANKToken
 
 #### **Description**
 A contract that defines the essential information of the token and allocates a specified amount of tokens to the team.
@@ -336,43 +328,43 @@ A contract that defines the essential information of the token and allocates a s
 <br>
 #### **Variables**
 ```javascript
-string public constant name = "Geens Platform Token";
+string public constant name = "Ranks Platform Token";
 ```
-Name of the token is Geens Platform Token. It cannot be changed later.
+Name of the token is Ranks Platform Token. It cannot be changed later.
 <br>
 <br>
 ```javascript
-string public constant symbol = "GEE";
+string public constant symbol = "RANK";
 ```
-Symbol of the token is GEE. It cannot be changed later.
+Symbol of the token is RANK. It cannot be changed later.
 <br>
 <br>
 ```javascript
-uint8 public constant decimals = 8;
+uint8 public constant decimals = 18;
 ```
-Token has 8 decimal places. It cannot be changed later.
+Token has 18 decimal places. It cannot be changed later.
 <br>
 <br>
 ```javascript
-address public constant TEAM0 = 0x9B4df4ac63B6049DD013090d3F639Fd2EA5A02d3;
+address public constant TEAM0 = 0x5750885e96a6728639c93433BceA2c5b4519F462;
 ```
 The zero address of the team that receives 2.4% of tokens.
 <br>
 <br>
 ```javascript
-address public constant TEAM1 = 0x4df9348239f6C1260Fc5d0611755cc1EF830Ff6c;
+address public constant TEAM1 = 0xb22347E0Ee848aB56d8cCDf58F97fB0D0Ec272eA;
 ```
 The first address of the team that receives 3.6% of tokens that can only be spent after the half of the year.
 <br>
 <br>
 ```javascript
-address public constant TEAM2 = 0x4902A52F95d9D47531Bed079B5B028c7F89ad47b;
+address public constant TEAM2 = 0x78eC754C2103cF26676686b2e76a88553Bf7c0c2;
 ```
 Second address of the team that receives 6% of tokens that can only be spent after the year.
 <br>
 <br>
 ```javascript
-address public constant COMMUNITY = 0x265FC1d98f3C0D42e4273F542917525C3c3F925A;
+address public constant COMMUNITY = 0x24B738698EC3bccadb61Dc74b8DFb23a712074b0;
 ```
 Community address receives 21% of tokens.
 <br>
@@ -440,7 +432,7 @@ uint256 private constant DENOMINATOR = 1000;
 
 #### **Functions**
 ```javascript
-    function GEEToken() {
+    function RANKToken() {
         //88% of _totalSupply
         balances[msg.sender] = _totalSupply * ICO_THOUSANDTH / DENOMINATOR;
         //2.4% of _totalSupply
@@ -485,7 +477,7 @@ A function that allows an owner of the contract unlocking tokens for the team wa
 
 ---
 
-### GEECrowdsale
+### RANKCrowdsale
 
 #### **Description**
 A contract that is responsible for handling the Crowdsale operations. It accepts Ether from contributors and issues the corresponding number of tokens.
@@ -517,7 +509,7 @@ A maximum contribution in Ether.
 <br>
 <br>
 ```javascript
-address fund = 0x48a2909772b049D0eA3A0979eE05eDF37119738d;
+address fund = 0x24B738698EC3bccadb61Dc74b8DFb23a712074b0;
 ```
 An address where the received Ether is forwarded.
 <br>
@@ -529,37 +521,37 @@ Indicates how many blocks are mined per day.
 <br>
 <br>
 ```javascript
-uint256 public constant START_BLOCK_NUMBER = 4506850;
+uint256 public constant START_BLOCK_NUMBER = 4625526;
 ```
 A number of the block when the Crowdsale should start.
 <br>
 <br>
 ```javascript
-uint256 public TIER2 = 4525700;
+uint256 public TIER2 = 4725700;
 ```
 A number of the block when the tier2Price price should be active.
 <br>
 <br>
 ```javascript
-uint256 public TIER3 = 4569600;
+uint256 public TIER3 = 4769600;
 ```
 A number of the block when the tier3Price price should be active.
 <br>
 <br>
 ```javascript
-uint256 public TIER4 = 4632300;
+uint256 public TIER4 = 4742300;
 ```
 A number of the block when the tier4Price price should be active.
 <br>
 <br>
 ```javascript
-uint256 public endBlockNumber = 4695000;
+uint256 public endBlockNumber = 4795000;
 ```
 A number of the block when the Crowdsale should end.
 <br>
 <br>
 ```javascript
-uint256 public constant MAX_END_BLOCK_NUMBER = 4890000;
+uint256 public constant MAX_END_BLOCK_NUMBER = 4891000;
 ```
 A max number of the block the Crowdsale can end.
 <br>
@@ -595,15 +587,15 @@ A price (in Wei) of one token (when tier4 is active).
 <br>
 <br>
 ```javascript
-Token public gee;
+Token public rank;
 ```
 Reference to the Token contract.
 <br>
 <br>
 ```javascript
-uint256 public constant SOFT_CAP_IN_ETHER = 4000 ether;
+uint256 public constant SOFT_CAP_IN_ETHER = 14000 ether;
 ```
-Soft Cap of the Crowdsale is 4000 Ether. If the soft cap is not reached, contributors will be able to refund their Ether.
+Soft Cap of the Crowdsale is 14000 Ether. If the soft cap is not reached, contributors will be able to refund their Ether.
 <br>
 <br>
 ```javascript
@@ -619,9 +611,9 @@ The total amount of Ether collected during the Crowdsale.
 <br>
 <br>
 ```javascript
-uint256 public constant GEE100 = 100 * (10**8);
+uint256 public constant RANK100 = 100 * (10**8);
 ```
-A constant corresponding to 100 GEE tokens.
+A constant corresponding to 100 RANK tokens.
 <br>
 <br>
 
@@ -629,7 +621,7 @@ A constant corresponding to 100 GEE tokens.
 ```javascript
 event Buy (address indexed _who, uint256 _amount, uint256 indexed _price);
 ```
-An event that is triggered when someone buys GEE tokens.
+An event that is triggered when someone buys RANK tokens.
 <br>
 <br>
 ```javascript
@@ -647,11 +639,11 @@ The event that is triggered when crowdsale end block has been changed.
 
 #### **Functions**
 ```javascript
-function GEECrowdsale(Token _geeToken)
-    notZeroAddress(_geeToken)
+function RANKCrowdsale(Token _geeToken)
+    notZeroAddress(_rankToken)
     payable
 {
-    gee = _geeToken;
+    rank = _rankToken;
 }
 ```
 Before deploying this contract, Token contract must already be deployed. After the Crowdsale, owner can send back Ether if a refund is needed.
@@ -698,14 +690,14 @@ If the Crowdsale ends and the hard cap is not reached, this functions burns the 
         require(amountWei <= MAX_ETHER);
 
         price = getPrice();
-        //Count how many GEE sender can buy
+        //Count how many RANK sender can buy
         uint256 amount = amountWei / price;
         //Add amount to soldTokens
         soldTokens = soldTokens.ADD(amount);
 
         require(soldTokens <= hardCapInTokens);
 
-        if (soldTokens >= (hardCapInTokens - GEE100)) {
+        if (soldTokens >= (hardCapInTokens - RANK100)) {
             endBlockNumber = blocks;
         }
 
@@ -1152,4 +1144,4 @@ This function returns the difference between a and b. It checks that a is not lo
 
 ---
 
-The GEE Token sale will start on 7th of November, 2017. More details: https://tokensale.geens.com
+The RANK Token sale will start on 1 of February, 2018. More details: http://rankcoin.name/how-to-buy-rank-tokens/
