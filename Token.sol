@@ -5,7 +5,7 @@ import "./SafeMath.sol";
 import "./ERC20.sol";
 
 /*
-	Contract determines token
+	Contract determines tokens
 */
 contract Token is ERC20, Pausable {
 
