@@ -12,13 +12,13 @@ contract Token is ERC20, Pausable {
 
     using SafeMath for uint256;
 
-    //Total amount of Gee
+    //Total amount of Rank
     uint256 _totalSupply = 100 * (10**6) * (10**8);
 
     //end of crowdsale
-    uint256 public crowdsaleEndBlock = 4695000;
+    uint256 public crowdsaleEndBlock = 4795000;
     //end of crowdsale
-    uint256 public constant MAX_END_BLOCK_NUMBER = 4890000;
+    uint256 public constant MAX_END_BLOCK_NUMBER = 4891000;
 
     //Balances for each account
     mapping (address => uint256)  balances;
