@@ -2,7 +2,7 @@ pragma solidity ^0.4.16;
 
 import "./Trustable.sol";
 
-contract Pausable is Trustable 
+contract Pausable is Trustable  {
 
 
     //To check if Token is paused
