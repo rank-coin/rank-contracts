@@ -13,7 +13,7 @@ contract RANKToken is MigratableToken {
 
     
     //Name of the token
-    string public constant name = "RANKs Platform Token";
+    string public constant name = "RANKS Platform Token";
     //Symbol of the token
     string public constant symbol = "RANK";
     //Number of decimals of RANK
