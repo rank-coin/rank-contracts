@@ -1,6 +1,6 @@
 pragma solidity ^0.4.16;
 
-import "./Token.sol";
+import "./Token.soL";
 
 /*
 	Inspired by Civic and Golem
