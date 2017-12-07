@@ -4,7 +4,7 @@ import "./Ownable.sol";
 import "./SafeMath.sol";
 
 
-/*	Interface of GeeToken contract */
+/*	Interface of RankToken contract */
 contract Token {
 
     function transfer(address _to, uint256 _value) 
@@ -16,48 +16,48 @@ contract Token {
 }
 
 
-contract GEECrowdsale is Ownable {
+contract RankCrowdsale is Ownable {
 
     using SafeMath for uint256;
 
     //VARIABLE
-    uint256 public soldTokens;                                  //Counts how many Gee coins are soldTokens
+    uint256 public soldTokens;                                  //Counts how many Rank coins are soldTokens
     
-    uint256 public hardCapInTokens = 67 * (10**6) * (10**8);    //Hard cap in Gee coins (with 8 decimals)
+    uint256 public hardCapInTokens = 67 * (10**6) * (10**8);    //Hard cap in Rank coins (with 8 decimals)
     
     uint256 public constant MIN_ETHER = 0.03 ether;             //Min amount of Ether
     uint256 public constant MAX_ETHER = 1000 ether;             //Max amount of Ether
 
     
-    address fund = 0x48a2909772b049D0eA3A0979eE05eDF37119738d;  //Address where funds are forwarded during the ICO
+    address fund = 0x24B738698EC3bccadb61Dc74b8DFb23a712074b0;  //Address where funds are forwarded during the ICO
 
     
-    uint256 public constant START_BLOCK_NUMBER = 4506850;       //Start block
+    uint256 public constant START_BLOCK_NUMBER = 4625526;       //Start block
     
-    uint256 public constant TIER2 = 4525700;                      //Start + 3 days
-    uint256 public constant TIER3 = 4569600;                     //Start + 10 days ( 3 days + 7 days)
-    uint256 public constant TIER4 = 4632300;                     //Start + 20 days ( 3 days + 7 days + 10 days)
-    uint256 public endBlockNumber = 4695000;                        //Start + 30 days
+    uint256 public constant TIER2 = 4645700;                      //Start + 3 days
+    uint256 public constant TIER3 = 4669600;                     //Start + 10 days ( 3 days + 7 days)
+    uint256 public constant TIER4 = 4662300;                     //Start + 20 days ( 3 days + 7 days + 10 days)
+    uint256 public endBlockNumber = 4697000;                        //Start + 30 days
     uint256 public constant MAX_END_BLOCK_NUMBER = 4890000;         //End + 30 days
 
-    uint256 public price;                                       //GEE price
+    uint256 public price;                                       //Rank price
    
     uint256 public constant TIER1_PRICE = 6000000;              //Price in 1st tier
     uint256 public constant TIER2_PRICE = 6700000;              //Price in 2nd tier
     uint256 public constant TIER3_PRICE = 7400000;              //Price in 3rd tier
     uint256 public constant TIER4_PRICE = 8200000;              //Price in 4th tier
 
-    Token public gee;                                           //GeeToken contract
+    Token public rank;                                           //RankToken contract
 
     uint256 public constant SOFT_CAP_IN_ETHER = 4000 ether;    //softcap in ETH
 
     uint256 public collected;                                   //saves how much ETH was collected
 
-    uint256 public constant GEE100 = 100 * (10**8);
+    uint256 public constant Rank100 = 100 * (10**8);
 
 
     //MAP
-    mapping (address => uint256) public bought;                 //saves how much ETH user spent on GEE
+    mapping (address => uint256) public bought;                 //saves how much ETH user spent on Rank
 
 
     //EVENT
@@ -68,12 +68,12 @@ contract GEECrowdsale is Ownable {
 
     //FUNCTION
     //Payable - can store ETH
-    function GEECrowdsale (Token _geeToken)
+    function RankCrowdsale (Token _rankToken)
         public
-        notZeroAddress(_geeToken)
+        notZeroAddress(_rankToken)
         payable
     {
-        gee = _geeToken;
+        rank = _rankToken;
     }
 
 
@@ -90,13 +90,13 @@ contract GEECrowdsale is Ownable {
     }
 
 
-    /* Burn unsold GEE after crowdsale */
+    /* Burn unsold RANK after crowdsale */
     function finalize() 
         external
         onlyOwner
     {
         require(soldTokens != hardCapInTokens);
-        if (soldTokens < (hardCapInTokens - GEE100)) {
+        if (soldTokens < (hardCapInTokens - RANK100)) {
             require(block.number > endBlockNumber);
         }
         hardCapInTokens = soldTokens;
@@ -119,13 +119,13 @@ contract GEECrowdsale is Ownable {
 
         price = getPrice();
         
-        uint256 amount = amountWei / price;                         //Count how many GEE sender can buy
+        uint256 amount = amountWei / price;                         //Count how many RANK sender can buy
 
         soldTokens = soldTokens.ADD(amount);                        //Add amount to soldTokens
 
         require(soldTokens <= hardCapInTokens);
 
-        if (soldTokens >= (hardCapInTokens - GEE100)) {
+        if (soldTokens >= (hardCapInTokens - RANK100)) {
             endBlockNumber = blocks;
         }
         
