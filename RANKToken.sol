@@ -1,7 +1,7 @@
 pragma solidity ^0.4.16;
 
 /*
-	@title GEEToken
+	@title RANKToken
 */
 
 import "./MigratableToken.sol";
@@ -9,23 +9,23 @@ import "./MigratableToken.sol";
 /*
 	Contract defines specific token
 */
-contract GEEToken is MigratableToken {
+contract RANKToken is MigratableToken {
 
     
     //Name of the token
-    string public constant name = "Geens Platform Token";
+    string public constant name = "RANKs Platform Token";
     //Symbol of the token
-    string public constant symbol = "GEE";
-    //Number of decimals of GEE
-    uint8 public constant decimals = 8;
+    string public constant symbol = "RANK";
+    //Number of decimals of RANK
+    uint8 public constant decimals = 18;
 
     //Team allocation
     //Team wallet that will be unlocked after ICO
-    address public constant TEAM0 = 0x9B4df4ac63B6049DD013090d3F639Fd2EA5A02d3;
+    address public constant TEAM0 = 0x5750885e96a6728639c93433BceA2c5b4519F462;
     //Team wallet that will be unlocked after 0.5 year after ICO
-    address public constant TEAM1 = 0x4df9348239f6C1260Fc5d0611755cc1EF830Ff6c;
+    address public constant TEAM1 = 0xb22347E0Ee848aB56d8cCDf58F97fB0D0Ec272eA;
     //Team wallet that will be unlocked after 1 year after ICO
-    address public constant TEAM2 = 0x4902A52F95d9D47531Bed079B5B028c7F89ad47b;
+    address public constant TEAM2 = 0x78eC754C2103cF26676686b2e76a88553Bf7c0c2;
     //0.5 year after ICO
     uint256 public constant UNLOCK_TEAM_1 = 1528372800;
     //1 year after ICO
@@ -36,7 +36,7 @@ contract GEEToken is MigratableToken {
     uint256 public team2Balance;
 
     //Community allocation
-    address public constant COMMUNITY = 0x265FC1d98f3C0D42e4273F542917525C3c3F925A;
+    address public constant COMMUNITY = 0x24B738698EC3bccadb61Dc74b8DFb23a712074b0;
 
     //2.4%
     uint256 private constant TEAM0_THOUSANDTH = 24;
@@ -51,7 +51,7 @@ contract GEEToken is MigratableToken {
     //100%
     uint256 private constant DENOMINATOR = 1000;
 
-    function GEEToken() {
+    function RANKToken() {
         //67% of _totalSupply
         balances[msg.sender] = _totalSupply * ICO_THOUSANDTH / DENOMINATOR;
         //2.4% of _totalSupply
