@@ -3,7 +3,7 @@ pragma solidity ^0.4.16;
 import "./Ownable.sol";
 
 /*
-	Trustable saves trusted addresses
+	Trustable saves trusted addresse
 */
 contract Trustable is Ownable {
 
