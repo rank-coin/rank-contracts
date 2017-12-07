@@ -4,7 +4,7 @@ pragma solidity ^0.4.16;
  * @title SafeMath
  * @dev Math operations with safety checks that throw on error
  */
-library SafeMath {
+library SafeMath 
 
 
     /*
