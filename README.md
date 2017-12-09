@@ -2,7 +2,7 @@
 
 ---
 
-**Last updated:** February 1, 2018
+**Last updated:** January 15, 2017
 
 ---
 
@@ -68,7 +68,7 @@ These contracts were thoroughly tested and all parts were double checked many ti
 
 During the following days, these contracts will continue to be updated. Before launching them on the main Ethereum network, the block numbers and hard-coded addresses will be modified.
 
-The RANK Token sale will start on 1th of February, 2018. More details: http://rankcoin.name/how-to-buy-rank-tokens/
+The RANK Token sale will start on 15th of February, 2018. More details: http://rankcoin.name/how-to-buy-rank-tokens/
 
 ---
 
@@ -639,7 +639,7 @@ The event that is triggered when crowdsale end block has been changed.
 
 #### **Functions**
 ```javascript
-function RANKCrowdsale(Token _geeToken)
+function RANKCrowdsale(Token _rankToken)
     notZeroAddress(_rankToken)
     payable
 {
@@ -664,10 +664,10 @@ A Fallback function that is called when someone sends Ether to the contract.
 ```javascript
 function finalize() external  onlyOwner{
         require(soldTokens != hardCapInTokens);
-        if (soldTokens < (hardCapInTokens - GEE100)) {
+        if (soldTokens < (hardCapInTokens - RANK100)) {
             require(block.number > endBlockNumber);
         }
-        gee.burn(hardCapInTokens.SUB(soldTokens));
+        rank.burn(hardCapInTokens.SUB(soldTokens));
         hardCapInTokens = soldTokens;
     }
 ```
@@ -1144,4 +1144,4 @@ This function returns the difference between a and b. It checks that a is not lo
 
 ---
 
-The RANK Token sale will start on 1 of February, 2018. More details: http://rankcoin.name/how-to-buy-rank-tokens/
+The RANK Token sale will start on 15 of February, 2018. More details: http://rankcoin.name/how-to-buy-rank-tokens/
