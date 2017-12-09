@@ -2,7 +2,7 @@
 
 ---
 
-**Last updated:** January 15, 2017
+**Last updated:** January 16, 2017
 
 ---
 
