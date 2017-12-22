@@ -21,7 +21,7 @@ contract RankCrowdsale is Ownable {
     using SafeMath for uint256;
 
     //VARIABLE
-    uint256 public soldTokens;                                  //Counts how many Rank coins are soldToken
+    uint256 public soldTokens;                                  //Counts how many Rank coins are soldTokens
     
     uint256 public hardCapInTokens = 67 * (10**6) * (10**8);    //Hard cap in Rank coins (with 8 decimals)
     
