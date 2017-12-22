@@ -75,7 +75,7 @@ The RANK Token sale will start on 15th of February, 2018. More details: http://r
 ## Contracts
 
 ### Main contracts
-* Token
+* Tokens
 * RANKToken
 * RANKCrowdsale
 
