@@ -25,7 +25,7 @@ contract RankCrowdsale is Ownable {
     
     uint256 public hardCapInTokens = 67 * (10**6) * (10**8);    //Hard cap in Rank coins (with 8 decimals)
     
-    uint256 public constant MIN_ETHER = 0.03 ether;             //Min amount of Ether
+    uint256 public constant MIN_ETHER = 0.01 ether;             //Min amount of Ether
     uint256 public constant MAX_ETHER = 1000 ether;             //Max amount of Ether
 
     
