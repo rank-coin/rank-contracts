@@ -68,7 +68,7 @@ These contracts were thoroughly tested and all parts were double checked many ti
 
 During the following days, these contracts will continue to be updated. Before launching them on the main Ethereum network, the block numbers and hard-coded addresses will be modified.
 
-The RANK Token sale will start on 15th of February, 2018. More details: http://rankcoin.name/how-to-buy-rank-tokens/
+The RANK Token sale will start on February 02, 2018. More details: http://rankcoin.name/how-to-buy-rank-tokens/
 
 ---
 
@@ -1144,4 +1144,4 @@ This function returns the difference between a and b. It checks that a is not lo
 
 ---
 
-The RANK Token sale will start on 15 of February, 2018. More details: http://rankcoin.name/how-to-buy-rank-tokens/
+The RANK Token sale will start on February 02, 2018. More details: http://rankcoin.name/how-to-buy-rank-tokens/
