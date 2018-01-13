@@ -593,9 +593,9 @@ Reference to the Token contract.
 <br>
 <br>
 ```javascript
-uint256 public constant SOFT_CAP_IN_ETHER = 000 ether;
+uint256 public constant SOFT_CAP_IN_ETHER = 6000 ether;
 ```
-Soft Cap of the Crowdsale is 000 Ether. If the soft cap is not reached, contributors will be able to refund their Ether.
+Soft Cap of the Crowdsale is 6000 Ether. If the soft cap is not reached, contributors will be able to refund their Ether.
 <br>
 <br>
 ```javascript
