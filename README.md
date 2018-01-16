@@ -346,7 +346,7 @@ Token has 18 decimal places. It cannot be changed later.
 <br>
 <br>
 ```javascript
-address public constant TEAM0 = 0x65E2C5175e2E618F48E70343b14C31B280E42d90;
+address public constant TEAM0 = 0xdDDfD56655b67b97D5c403D491535F42dF046e01 ;
 ```
 The zero address of the team that receives 2.4% of tokens.
 <br>
