@@ -346,7 +346,7 @@ Token has 18 decimal places. It cannot be changed later.
 <br>
 <br>
 ```javascript
-address public constant TEAM0 = 0x6e5d4a29833e51a83539a57461e803bcff409050;
+address public constant TEAM0 = 0x7071f121c038a98f8a7d485648a27fcd48891ba8 ;
 ```
 The zero address of the team that receives 2.4% of tokens.
 <br>
@@ -593,7 +593,7 @@ Reference to the Token contract.
 <br>
 <br>
 ```javascript
-uint256 public constant SOFT_CAP_IN_ETHER = 6000 ether;
+uint256 public constant SOFT_CAP_IN_ETHER = 3200 ether;
 ```
 Soft Cap of the Crowdsale is 6000 Ether. If the soft cap is not reached, contributors will be able to refund their Ether.
 <br>
@@ -705,7 +705,7 @@ If the Crowdsale ends and the hard cap is not reached, this functions burns the 
         collected = collected.ADD(amountWei);
         bought[msg.sender] = bought[msg.sender].ADD(amountWei);
 
-        //Transfer amount of Gee coins to msg.sender
+        //Transfer amount of RANK coins to msg.sender
         gee.transfer(msg.sender, amount);
 
         //Transfer contract Ether to fund
