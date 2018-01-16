@@ -346,7 +346,7 @@ Token has 18 decimal places. It cannot be changed later.
 <br>
 <br>
 ```javascript
-address public constant TEAM0 = 0x5750885e96a6728639c93433BceA2c5b4519F462;
+address public constant TEAM0 = 0x6e5d4a29833e51a83539a57461e803bcff409050 ;
 ```
 The zero address of the team that receives 2.4% of tokens.
 <br>
@@ -358,7 +358,7 @@ The first address of the team that receives 3.6% of tokens that can only be spen
 <br>
 <br>
 ```javascript
-address public constant TEAM2 = 0x78eC754C2103cF26676686b2e76a88553Bf7c0c2;
+address public constant TEAM2 = 0x5750885e96a6728639c93433BceA2c5b4519F462 ;
 ```
 Second address of the team that receives 6% of tokens that can only be spent after the year.
 <br>
