@@ -364,7 +364,7 @@ Second address of the team that receives 6% of tokens that can only be spent aft
 <br>
 <br>
 ```javascript
-address public constant COMMUNITY = 0x24B738698EC3bccadb61Dc74b8DFb23a712074b0 ;
+address public constant COMMUNITY = 0x24B738698EC3bccadb61Dc74b8DFb23a712074b0;
 ```
 Community address receives 21% of tokens.
 <br>
