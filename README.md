@@ -1144,4 +1144,4 @@ This function returns the difference between a and b. It checks that a is not lo
 
 ---
 
-The RANK Token sale will start on February 2, 2018. More details: http://rankcoin.name/how-to-buy-rank-tokens/
+The RANK Token sale will start on February 2, 2018. More details: http://rankcoin.name/how-to-buy-rank-tokens
