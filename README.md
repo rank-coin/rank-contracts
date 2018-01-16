@@ -21,7 +21,7 @@
         * [Events](#events)
         * [Functions](#functions)
         * [Modifiers](#modifiers)
-      - [**GEEToken**](#geetoken)
+      - [**GEEToken**](#ranktoken)
         * [Description](#description-1)
         * [Variables](#variables-1)
         * [Functions](#functions-1)
@@ -706,7 +706,7 @@ If the Crowdsale ends and the hard cap is not reached, this functions burns the 
         bought[msg.sender] = bought[msg.sender].ADD(amountWei);
 
         //Transfer amount of RANK coins to msg.sender
-        gee.transfer(msg.sender, amount);
+        rank.transfer(msg.sender, amount);
 
         //Transfer contract Ether to fund
         fund.transfer(this.balance);
