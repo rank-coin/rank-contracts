@@ -352,7 +352,7 @@ The zero address of the team that receives 2.4% of tokens.
 <br>
 <br>
 ```javascript
-address public constant TEAM1 = 0xb22347E0Ee848aB56d8cCDf58F97fB0D0Ec272eA;
+address public constant TEAM1 = 0xdff70d6eb2823e7F2bC81f87e2ad4F3872379f82;
 ```
 The first address of the team that receives 3.6% of tokens that can only be spent after the half of the year.
 <br>
@@ -364,7 +364,7 @@ Second address of the team that receives 6% of tokens that can only be spent aft
 <br>
 <br>
 ```javascript
-address public constant COMMUNITY = 0x24B738698EC3bccadb61Dc74b8DFb23a712074b0;
+address public constant COMMUNITY = 0x24B738698EC3bccadb61Dc74b8DFb23a712074b0 ;
 ```
 Community address receives 21% of tokens.
 <br>
