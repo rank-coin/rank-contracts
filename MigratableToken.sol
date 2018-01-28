@@ -1,13 +1,5 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.18 ;
 
-import "./Token.sol";
-
-/*
-	Inspired by Civic and Golem
-
-*/
-
-/*
 	Interface of migrate agent contract (the new token contract)
 */
 contract MigrateAgent {
