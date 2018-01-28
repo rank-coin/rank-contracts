@@ -1,4 +1,4 @@
-pragma solidity ^0.4.18 ;
+pragma solidity ^0.4.18;
 
 	Interface of migrate agent contract (the new token contract)
 */
