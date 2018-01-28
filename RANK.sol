@@ -1,4 +1,4 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.18 ;
 
 import 'zeppelin-solidity/contracts/token/MintableToken.sol';
 import 'zeppelin-solidity/contracts/token/BurnableToken.sol';
@@ -45,14 +45,4 @@ contract RankCoin is MintableToken, BurnableToken {
     Burn(_from, _value);
   }
 }
-© 2018 GitHub, Inc .
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
+
